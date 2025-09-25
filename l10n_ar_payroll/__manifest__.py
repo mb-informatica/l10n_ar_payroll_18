@@ -3,7 +3,7 @@
 
 {
     'name': 'Payroll Argentina - l10n_ar',
-    'version': '14.0.3.0.0',
+    'version': '18.0.3.0.0',
     'description': 'Adaptacion del modulo payroll para Localizacion Argentina.',
     'summary': 'Configuracion y adaptaicones modulo payroll para Argentina.',
     'author': 'Nimarosa',
@@ -49,6 +49,10 @@
     ],
     'qweb': [],
     'installable': True,
+    'external_dependencies': {
+        'python': ['num2words'],
+    },
     'auto_install': False,
     'application': False
 }
+

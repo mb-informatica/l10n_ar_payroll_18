@@ -56,10 +56,10 @@
         <field name="name">hr.afip.situacion_revista.view.tree</field>
         <field name="model">hr.afip.situacion_revista</field>
         <field name="arch" type="xml">
-            <tree editable="top">
+            <list editable="top">
                 <field name="afip_id" />
                 <field name="name" />
-            </tree>
+            </list>
         </field>
     </record>
     <!-- hr.afip.condicion action window -->
@@ -74,10 +74,10 @@
         <field name="name">hr.afip.condicion.view.tree</field>
         <field name="model">hr.afip.condicion</field>
         <field name="arch" type="xml">
-            <tree editable="top">
+            <list editable="top">
                 <field name="afip_id" />
                 <field name="name" />
-            </tree>
+            </list>
         </field>
     </record>
     <!-- hr.afip.actividad action window -->
@@ -92,10 +92,10 @@
         <field name="name">hr.afip.actividad.view.tree</field>
         <field name="model">hr.afip.actividad</field>
         <field name="arch" type="xml">
-            <tree editable="top">
+            <list editable="top">
                 <field name="afip_id" />
                 <field name="name" />
-            </tree>
+            </list>
         </field>
     </record>
     <!-- hr.afip.modalidad_contratacion action window -->
@@ -110,10 +110,10 @@
         <field name="name">hr.afip.modalidad_contratacion.view.tree</field>
         <field name="model">hr.afip.modalidad_contratacion</field>
         <field name="arch" type="xml">
-            <tree editable="top">
+            <list editable="top">
                 <field name="afip_id" />
                 <field name="name" />
-            </tree>
+            </list>
         </field>
     </record>
     <!-- hr.afip.codigo_siniestrado action window -->
@@ -128,10 +128,10 @@
         <field name="name">hr.afip.codigo_siniestrado.view.tree</field>
         <field name="model">hr.afip.codigo_siniestrado</field>
         <field name="arch" type="xml">
-            <tree editable="top">
+            <list editable="top">
                 <field name="afip_id" />
                 <field name="name" />
-            </tree>
+            </list>
         </field>
     </record>
     <!-- hr.afip.localidad action window -->
@@ -146,10 +146,10 @@
         <field name="name">hr.afip.localidad.view.tree</field>
         <field name="model">hr.afip.localidad</field>
         <field name="arch" type="xml">
-            <tree editable="top">
+            <list editable="top">
                 <field name="afip_id" />
                 <field name="name" />
-            </tree>
+            </list>
         </field>
     </record>
     <!-- hr.afip.obra_social action window -->
@@ -164,10 +164,11 @@
         <field name="name">hr.afip.obra_social.view.tree</field>
         <field name="model">hr.afip.obra_social</field>
         <field name="arch" type="xml">
-            <tree editable="top">
+            <list editable="top">
                 <field name="afip_id" />
                 <field name="name" />
-            </tree>
+            </list>
         </field>
     </record>
 </odoo>
+

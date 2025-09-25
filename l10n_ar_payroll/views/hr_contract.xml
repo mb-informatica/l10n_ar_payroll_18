@@ -9,15 +9,16 @@
             <xpath expr="//group[@name='main_info']" position="inside">
                 <separator string="Parametros Adicionales" />
                 <field name="hr_contract_advantage_ids">
-                    <tree editable="bottom">
+                    <list editable="bottom">
                         <field name="contract_advantage_template_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,}"/>
                         <field name="advantage_lower_bound" />
                         <field name="advantage_upper_bound" />
                         <field name="use_default" widget="boolean_toggle" />
                         <field name="override_amount" attrs="{'invisible':[('use_default', '==', True)]}" />
-                    </tree>
+                    </list>
                 </field>
             </xpath>
         </field>
     </record>
 </odoo>
+

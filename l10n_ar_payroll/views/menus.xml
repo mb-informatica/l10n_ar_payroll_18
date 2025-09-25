@@ -18,3 +18,4 @@
         <!-- AFIP Obra Social Menu  -->
         <menuitem id="hr.menu_afip_obra_social" name="Obras Sociales" parent="hr.menu_afip" action="hr_afip_obra_social_action" sequence="207" />
 </odoo>
+
