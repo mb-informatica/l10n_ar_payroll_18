@@ -3,7 +3,7 @@
 
 {
     'name': 'Payroll Argentina - l10n_ar',
-    'version': '18.0.3.0.0',
+    'version': '',
     'description': 'Adaptacion del modulo payroll para Localizacion Argentina.',
     'summary': 'Configuracion y adaptaicones modulo payroll para Argentina.',
     'author': 'Nimarosa',
@@ -15,11 +15,8 @@
         'hr_contract',
         'hr_attendance',
         'hr_holidays',
-        'hr_holidays_public',
         'hr_expense',
         'hr_work_entry',
-        'hr_attendance_report_theoretical_time',
-        'hr_contract_rate',
         'payroll',
         'l10n_ar',
         'l10n_ar_hr_contract_labor_union',
