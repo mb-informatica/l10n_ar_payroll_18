@@ -22,35 +22,38 @@ class HrPayslip(models.Model):
             last_month = slip_date.replace(day=1) - timedelta(days=1)
         return last_month
 
-    def _get_contract_advantage_inputs(self, contract):
-        """Get contract advantage inputs"""
-        res = []
-        for advantage in contract.hr_contract_advantage_ids:
-            res.append({
-                "name": advantage.contract_advantage_template_id.name,
-                "code": advantage.contract_advantage_template_id.code,
-                "amount": advantage.amount
-            })
-        return res
-
     @api.model
     def _get_inputs_data(self, contracts, date_from, date_to):
-        """Updated method for Odoo 18 to get input lines data"""
+        """Updated method for Odoo 18"""
         res = super()._get_inputs_data(contracts, date_from, date_to)
 
         for contract in contracts:
-            # Add contract advantages
-            res.extend(self._get_contract_advantage_inputs(contract))
+            # Contract advantages
+            for advantage in contract.hr_contract_advantage_ids:
+                res.append({
+                    "name": advantage.contract_advantage_template_id.name,
+                    "code": advantage.contract_advantage_template_id.code,
+                    "amount": advantage.amount
+                })
+
+            # SAC inputs
+            if self._check_sac_period_valid(date_from):
+                sac_base = {
+                    "name": 'Mejor salario bruto mensual semestral - S.A.C',
+                    "code": 'SACBASE', 
+                    "amount": 0.00  # Simplified for initial migration
+                }
+                res.append(sac_base)
 
         return res
 
     def _check_sac_period_valid(self, date):
         return date.month in [6, 12]
 
-    def _get_overtime_data(self, contract, day_from, day_to):
-        return self.env['hr.overtime'].search([
-            ('employee_id', '=', contract.employee_id.id),
-            ('state', '=', 'validate'),
-            ('start_date', '>=', day_from), 
-            ('start_date', '<=', day_to),
-        ])
+    def _get_sac_semester(self, date):
+        sac_semester = {'sac_year': date.year, 'sac_months': []}
+        if date.month == 6:
+            sac_semester['sac_months'] = [1, 2, 3, 4, 5]
+        elif date.month == 12:
+            sac_semester['sac_months'] = [7, 8, 9, 10, 11]
+        return sac_semester

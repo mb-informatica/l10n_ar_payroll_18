@@ -30,7 +30,7 @@
         'views/menus.xml',
         'views/hr_contract.xml',
         'views/hr_payslip_views.xml',
-        'views/hr_leave_type.xml',
+        #'views/hr_leave_type.xml',
         'data/tablas_afip_sicoss.xml',
         'data/payroll_account.xml',
         'data/hr_leaves.xml',
@@ -47,10 +47,12 @@
         'report/l10n_ar_payslip_report_template.xml',
         'report/l10n_ar_payslip_report.xml',
     ],
+    'qweb': [],
     'installable': True,
-    'auto_install': False,
-    'application': False,
     'external_dependencies': {
         'python': ['num2words'],
     },
+    'auto_install': False,
+    'application': False
 }
+
