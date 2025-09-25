@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- SINDICATO -->
+        <record id="lu_asimra_metalurgicos" model="hr.labor_union">
+            <field name="sindicato">ASIMRA - METALURGICOS</field>
+            <field name="convenio">237/94</field>
+        </record>
+
+        <!-- CATEGORIAS -->
+        <!-- ASIMRA: Supervisor de Fabrica 4º -->
+        <record id="category_supervisor_fabrica_4ta" model="hr.labor_union.category">
+            <field name="labor_union_id" ref="l10n_ar_payroll_lu_asimra.lu_asimra_metalurgicos" />
+            <field name="name">Supervisor de Fabrica 4º</field>
+            <field name="category_period_type">month</field>
+        </record>
+        <!-- 2021-07-01 -->
+        <record id="category_price_supervisor_fabrica_4ta_202107" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_4ta" />
+            <field name="from_date">2021-07-01</field>
+            <field name="to_date">2021-09-30</field>
+            <field name="value">86249.00</field>
+        </record>
+        <!-- 2021-10-01 -->
+        <record id="category_price_supervisor_fabrica_4ta_202110" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_4ta" />
+            <field name="from_date">2021-10-01</field>
+            <field name="to_date">2021-12-31</field>
+            <field name="value">93749.00</field>
+        </record>
+        <!-- 2022-01-01 -->
+        <record id="category_price_supervisor_fabrica_4ta_202201" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_4ta" />
+            <field name="from_date">2022-01-01</field>
+            <field name="to_date">2022-01-31</field>
+            <field name="value">105149.00</field>
+        </record>
+        <!-- 2022-02-01 -->
+        <record id="category_price_supervisor_fabrica_4ta_202202" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_4ta" />
+            <field name="from_date">2022-02-01</field>
+            <field name="to_date">2022-02-28</field>
+            <field name="value">108899.00</field>
+        </record>
+        <!-- 2022-03-01 -->
+        <record id="category_price_supervisor_fabrica_4ta_202202" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_4ta" />
+            <field name="from_date">2022-03-01</field>
+            <field name="to_date">2022-03-31</field>
+            <field name="value">112648.00</field>
+        </record>
+
+        <!-- ASIMRA: Supervisor Tecnico 3º -->
+        <record id="category_supervisor_tenico_3ra" model="hr.labor_union.category">
+            <field name="labor_union_id" ref="l10n_ar_payroll_lu_asimra.lu_asimra_metalurgicos" />
+            <field name="name">Supervisor Tecnico 3º</field>
+            <field name="category_period_type">month</field>
+        </record>
+        <!-- 2021-07-01 -->
+        <record id="category_price_supervisor_tenico_3ra_202107" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tenico_3ra" />
+            <field name="from_date">2021-07-01</field>
+            <field name="to_date">2021-09-30</field>
+            <field name="value">86249.00</field>
+        </record>
+        <!-- 2021-10-01 -->
+        <record id="category_price_supervisor_tenico_3ra_202110" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tenico_3ra" />
+            <field name="from_date">2021-10-01</field>
+            <field name="to_date">2021-12-31</field>
+            <field name="value">93749.00</field>
+        </record>
+        <!-- 2022-01-01 -->
+        <record id="category_price_supervisor_tenico_3ra_202201" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tenico_3ra" />
+            <field name="from_date">2022-01-01</field>
+            <field name="to_date">2022-01-31</field>
+            <field name="value">105149.00</field>
+        </record>
+        <!-- 2022-02-01 -->
+        <record id="category_price_supervisor_tenico_3ra_202202" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tenico_3ra" />
+            <field name="from_date">2022-02-01</field>
+            <field name="to_date">2022-02-28</field>
+            <field name="value">108899.00</field>
+        </record>
+        <!-- 2022-03-01 -->
+        <record id="category_price_supervisor_tenico_3ra_202203" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tenico_3ra" />
+            <field name="from_date">2022-03-01</field>
+            <field name="to_date">2022-03-31</field>
+            <field name="value">112648.00</field>
+        </record>
+
+
+        <!-- ASIMRA: Supervisor de Fabrica 3º -->
+        <record id="category_supervisor_fabrica_3ra" model="hr.labor_union.category">
+            <field name="labor_union_id" ref="l10n_ar_payroll_lu_asimra.lu_asimra_metalurgicos" />
+            <field name="name">Supervisor de Fabrica 3º</field>
+            <field name="category_period_type">month</field>
+        </record>
+        <!-- 2021-07-01 -->
+        <record id="category_price_supervisor_fabrica_3ra_202107" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_3ra" />
+            <field name="from_date">2021-07-01</field>
+            <field name="to_date">2021-09-30</field>
+            <field name="value">78189.00</field>
+        </record>
+        <!-- 2021-10-01 -->
+        <record id="category_price_supervisor_fabrica_3ra_202110" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_3ra" />
+            <field name="from_date">2021-10-01</field>
+            <field name="to_date">2021-12-31</field>
+            <field name="value">84988.00</field>
+        </record>
+        <!-- 2022-01-01 -->
+        <record id="category_price_supervisor_fabrica_3ra_202201" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_3ra" />
+            <field name="from_date">2022-01-01</field>
+            <field name="to_date">2022-01-31</field>
+            <field name="value">95322.00</field>
+        </record>
+        <!-- 2022-02-01 -->
+        <record id="category_price_supervisor_fabrica_3ra_202202" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_3ra" />
+            <field name="from_date">2022-02-01</field>
+            <field name="to_date">2022-02-28</field>
+            <field name="value">98721.00</field>
+        </record>
+        <!-- 2022-03-01 -->
+        <record id="category_price_supervisor_fabrica_3ra_202203" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_3ra" />
+            <field name="from_date">2022-03-01</field>
+            <field name="to_date">2022-03-31</field>
+            <field name="value">102121.00</field>
+        </record>
+
+        <!-- ASIMRA: Supervisor Tecnico 2º -->
+        <record id="category_supervisor_tecnico_2da" model="hr.labor_union.category">
+            <field name="labor_union_id" ref="l10n_ar_payroll_lu_asimra.lu_asimra_metalurgicos" />
+            <field name="name">Supervisor Tenico 2º</field>
+            <field name="category_period_type">month</field>
+        </record>
+        <!-- 2021-07-01 -->
+        <record id="category_price_supervisor_tecnico_2da_202107" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tecnico_2da" />
+            <field name="from_date">2021-07-01</field>
+            <field name="to_date">2021-09-30</field>
+            <field name="value">78189.00</field>
+        </record>
+        <!-- 2021-10-01 -->
+        <record id="category_price_supervisor_tecnico_2da_202110" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tecnico_2da" />
+            <field name="from_date">2021-10-01</field>
+            <field name="to_date">2021-12-31</field>
+            <field name="value">84988.00</field>
+        </record>
+        <!-- 2022-01-01 -->
+        <record id="category_price_supervisor_tecnico_2da_202201" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tecnico_2da" />
+            <field name="from_date">2022-01-01</field>
+            <field name="to_date">2022-01-31</field>
+            <field name="value">95322.00</field>
+        </record>
+        <!-- 2022-02-01 -->
+        <record id="category_price_supervisor_tecnico_2da_202202" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tecnico_2da" />
+            <field name="from_date">2022-02-01</field>
+            <field name="to_date">2022-02-28</field>
+            <field name="value">98721.00</field>
+        </record>
+        <!-- 2022-03-01 -->
+        <record id="category_price_supervisor_tecnico_2da_202203" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tecnico_2da" />
+            <field name="from_date">2022-03-01</field>
+            <field name="to_date">2022-03-31</field>
+            <field name="value">102121.00</field>
+        </record>
+
+        <!-- ASIMRA: Supervisor de Fabrica 2º -->
+        <record id="category_supervisor_fabrica_2da" model="hr.labor_union.category">
+            <field name="labor_union_id" ref="l10n_ar_payroll_lu_asimra.lu_asimra_metalurgicos" />
+            <field name="name">Supervisor de Fabrica 2º</field>
+            <field name="category_period_type">month</field>
+        </record>
+        <!-- 2021-07-01 -->
+        <record id="category_price_supervisor_fabrica_2da_202107" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_2da" />
+            <field name="from_date">2021-07-01</field>
+            <field name="to_date">2021-09-30</field>
+            <field name="value">69152.00</field>
+        </record>
+        <!-- 2021-10-01 -->
+        <record id="category_price_supervisor_fabrica_2da_202110" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_2da" />
+            <field name="from_date">2021-10-01</field>
+            <field name="to_date">2021-12-31</field>
+            <field name="value">75165.00</field>
+        </record>
+        <!-- 2022-01-01 -->
+        <record id="category_price_supervisor_fabrica_2da_202201" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_2da" />
+            <field name="from_date">2022-01-01</field>
+            <field name="to_date">2022-01-31</field>
+            <field name="value">84305.00</field>
+        </record>
+        <!-- 2022-02-01 -->
+        <record id="category_price_supervisor_fabrica_2da_202202" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_2da" />
+            <field name="from_date">2022-02-01</field>
+            <field name="to_date">2022-02-28</field>
+            <field name="value">87312.00</field>
+        </record>
+        <!-- 2022-03-01 -->
+        <record id="category_price_supervisor_fabrica_2da_202203" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_2da" />
+            <field name="from_date">2022-03-01</field>
+            <field name="to_date">2022-03-31</field>
+            <field name="value">90318.00</field>
+        </record>
+
+        <!-- ASIMRA: Supervisor Tecnico 1º -->
+        <record id="category_supervisor_tecnico_1ra" model="hr.labor_union.category">
+            <field name="labor_union_id" ref="l10n_ar_payroll_lu_asimra.lu_asimra_metalurgicos" />
+            <field name="name">Supervisor Tecnico 1º</field>
+            <field name="category_period_type">month</field>
+        </record>
+        <!-- 2021-07-01 -->
+        <record id="category_price_supervisor_tecnico_1ra_202107" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tecnico_1ra" />
+            <field name="from_date">2021-07-01</field>
+            <field name="to_date">2021-09-30</field>
+            <field name="value">69152.00</field>
+        </record>
+        <!-- 2021-10-01 -->
+        <record id="category_price_supervisor_tecnico_1ra_202110" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tecnico_1ra" />
+            <field name="from_date">2021-10-01</field>
+            <field name="to_date">2021-12-31</field>
+            <field name="value">75165.00</field>
+        </record>
+        <!-- 2022-01-01 -->
+        <record id="category_price_supervisor_tecnico_1ra_202201" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tecnico_1ra" />
+            <field name="from_date">2022-01-01</field>
+            <field name="to_date">2022-01-31</field>
+            <field name="value">84305.00</field>
+        </record>
+        <!-- 2022-02-01 -->
+        <record id="category_price_supervisor_tecnico_1ra_202202" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tecnico_1ra" />
+            <field name="from_date">2022-02-01</field>
+            <field name="to_date">2022-02-28</field>
+            <field name="value">87312.00</field>
+        </record>
+        <!-- 2022-03-01 -->
+        <record id="category_price_supervisor_tecnico_1ra_202203" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_tecnico_1ra" />
+            <field name="from_date">2022-03-01</field>
+            <field name="to_date">2022-03-31</field>
+            <field name="value">90318.00</field>
+        </record>
+
+        <!-- ASIMRA: Supervisor Administrativo -->
+        <record id="category_supervisor_adminsitrativo" model="hr.labor_union.category">
+            <field name="labor_union_id" ref="l10n_ar_payroll_lu_asimra.lu_asimra_metalurgicos" />
+            <field name="name">Supervisor Administrativo</field>
+            <field name="category_period_type">month</field>
+        </record>
+        <!-- 2021-07-01 -->
+        <record id="category_price_supervisor_administrativo_202107" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_adminsitrativo" />
+            <field name="from_date">2021-07-01</field>
+            <field name="to_date">2021-09-30</field>
+            <field name="value">69999.99</field>
+        </record>
+        <!-- 2021-10-01 -->
+        <record id="category_price_supervisor_administrativo_202110" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_adminsitrativo" />
+            <field name="from_date">2021-10-01</field>
+            <field name="to_date">2021-12-31</field>
+            <field name="value">76086.00</field>
+        </record>
+        <!-- 2022-01-01 -->
+        <record id="category_price_supervisor_administrativo_202201" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_adminsitrativo" />
+            <field name="from_date">2022-01-01</field>
+            <field name="to_date">2022-01-31</field>
+            <field name="value">85338.00</field>
+        </record>
+        <!-- 2022-02-01 -->
+        <record id="category_price_supervisor_administrativo_202202" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_adminsitrativo" />
+            <field name="from_date">2022-02-01</field>
+            <field name="to_date">2022-02-28</field>
+            <field name="value">88382.00</field>
+        </record>
+        <!-- 2022-03-01 -->
+        <record id="category_price_supervisor_administrativo_202202" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_adminsitrativo" />
+            <field name="from_date">2022-03-01</field>
+            <field name="to_date">2022-03-31</field>
+            <field name="value">91425.00</field>
+        </record>
+
+
+        <!-- ASIMRA: Supervisor de Fabrica 1º -->
+        <record id="category_supervisor_fabrica_1ra" model="hr.labor_union.category">
+            <field name="labor_union_id" ref="l10n_ar_payroll_lu_asimra.lu_asimra_metalurgicos" />
+            <field name="name">Supervisor de Fabrica de 1º</field>
+            <field name="category_period_type">month</field>
+        </record>
+        <!-- 2021-07-01 -->
+        <record id="category_price_supervisor_fabrica_1ra_202107" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_1ra" />
+            <field name="from_date">2021-07-01</field>
+            <field name="to_date">2021-09-30</field>
+            <field name="value">54334.00</field>
+        </record>
+        <!-- 2021-10-01 -->
+        <record id="category_price_supervisor_fabrica_1ra_202110" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_1ra" />
+            <field name="from_date">2021-10-01</field>
+            <field name="to_date">2021-12-31</field>
+            <field name="value">59070.00</field>
+        </record>
+        <!-- 2022-01-01 -->
+        <record id="category_price_supervisor_fabrica_1ra_202201" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_1ra" />
+            <field name="from_date">2022-01-01</field>
+            <field name="to_date">2022-01-31</field>
+            <field name="value">66253.00</field>
+        </record>
+        <!-- 2022-02-01 -->
+        <record id="category_price_supervisor_fabrica_1ra_202202" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_1ra" />
+            <field name="from_date">2022-02-01</field>
+            <field name="to_date">2022-02-28</field>
+            <field name="value">68616.00</field>
+        </record>
+        <!-- 2022-03-01 -->
+        <record id="category_price_supervisor_fabrica_1ra_202203" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_fabrica_1ra" />
+            <field name="from_date">2022-03-01</field>
+            <field name="to_date">2022-03-31</field>
+            <field name="value">70979.00</field>
+        </record>
+
+        <!-- ASIMRA: Supervisor de Servicios Generales -->
+        <record id="category_supervisor_serv_generales" model="hr.labor_union.category">
+            <field name="labor_union_id" ref="l10n_ar_payroll_lu_asimra.lu_asimra_metalurgicos" />
+            <field name="name">Supervisor Serv. Generales</field>
+            <field name="category_period_type">month</field>
+        </record>
+        <!-- 2021-07-01 -->
+        <record id="category_price_supervisor_serv_generales_202107" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_serv_generales" />
+            <field name="from_date">2021-07-01</field>
+            <field name="to_date">2021-09-30</field>
+            <field name="value">54344.00</field>
+        </record>
+        <!-- 2021-10-01 -->
+        <record id="category_price_supervisor_serv_generales_202110" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_serv_generales" />
+            <field name="from_date">2021-10-01</field>
+            <field name="to_date">2021-12-31</field>
+            <field name="value">59070.00</field>
+        </record>
+        <!-- 2022-01-01 -->
+        <record id="category_price_supervisor_serv_generales_202201" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_serv_generales" />
+            <field name="from_date">2022-01-01</field>
+            <field name="to_date">2022-01-31</field>
+            <field name="value">66253.00</field>
+        </record>
+        <!-- 2022-02-01 -->
+        <record id="category_price_supervisor_serv_generales_202202" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_serv_generales" />
+            <field name="from_date">2022-02-01</field>
+            <field name="to_date">2022-02-28</field>
+            <field name="value">68616.00</field>
+        </record>
+        <!-- 2022-03-01 -->
+        <record id="category_price_supervisor_serv_generales_202203" model="hr.labor_union.category.price">
+            <field name="labor_union_category_id" ref="l10n_ar_payroll_lu_asimra.category_supervisor_serv_generales" />
+            <field name="from_date">2022-03-01</field>
+            <field name="to_date">2022-03-31</field>
+            <field name="value">70979.00</field>
+        </record>
+
+        <!-- SVCO CONVENIO -->
+        <record id="svco_value_202107" model="hr.labor_union.svco_value">
+            <field name="labor_union_id" ref="l10n_ar_payroll_lu_asimra.lu_asimra_metalurgicos" />
+            <field name="from_date">2021-07-01</field>
+            <field name="to_date">2021-09-30</field>
+            <field name="value">377.62</field>
+        </record>
+        <record id="svco_value_202110" model="hr.labor_union.svco_value">
+            <field name="labor_union_id" ref="l10n_ar_payroll_lu_asimra.lu_asimra_metalurgicos" />
+            <field name="from_date">2021-10-01</field>
+            <field name="to_date">2021-12-31</field>
+            <field name="value">410.45</field>
+        </record>
+        <record id="svco_value_202201" model="hr.labor_union.svco_value">
+            <field name="labor_union_id" ref="l10n_ar_payroll_lu_asimra.lu_asimra_metalurgicos" />
+            <field name="from_date">2022-01-01</field>
+            <field name="to_date">2022-01-31</field>
+            <field name="value">495</field>
+        </record>
+        <record id="svco_value_202202" model="hr.labor_union.svco_value">
+            <field name="labor_union_id" ref="l10n_ar_payroll_lu_asimra.lu_asimra_metalurgicos" />
+            <field name="from_date">2022-02-01</field>
+            <field name="to_date">2022-02-28</field>
+            <field name="value">513</field>
+        </record>
+        <record id="svco_value_202203" model="hr.labor_union.svco_value">
+            <field name="labor_union_id" ref="l10n_ar_payroll_lu_asimra.lu_asimra_metalurgicos" />
+            <field name="from_date">2022-03-01</field>
+            <field name="to_date">2022-03-31</field>
+            <field name="value">530</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Categorias Basicas para el Calculo -->
+        <record id="categories_GROSS" model="hr.salary.rule.category">
+            <field name="name">(GLOBAL) REMUNERACION BRUTA</field>
+            <field name="code">GROSS</field>
+            <field name="note">Remuneracion bruta del empleado. Suma de todos los conceptos remunerativos. </field>
+        </record>
+        <record id="categories_NOREM" model="hr.salary.rule.category">
+            <field name="name">(GLOBAL) REMUNERACION NO REMUNERATIVA</field>
+            <field name="code">NOREM</field>
+            <field name="note">Remuneracion "NO REMUNERATIVA" del empleado. Suma de todos los conceptos no remunerativos. </field>
+        </record>
+        <record id="categories_DESC" model="hr.salary.rule.category">
+            <field name="name">(GLOBAL) DESCUENTOS</field>
+            <field name="code">DESC</field>
+            <field name="note">Suma de todos los descuentos por la empresa aplicados sobre el sueldo bruto del empleado. </field>
+        </record>
+        <record id="categories_RET" model="hr.salary.rule.category">
+            <field name="name">(GLOBAL) RETENCIONES</field>
+            <field name="code">RET</field>
+            <field name="note">Suma de todos los descuentos retenidos en favor de terceros aplicados sobre el sueldo bruto del empleado. </field>
+        </record>
+        <record id="categories_DED" model="hr.salary.rule.category">
+            <field name="name">(GLOBAL) DEDUCCIONES</field>
+            <field name="code">DED</field>
+            <field name="note">Suma de las deducciones realizadas sobre el sueldo neto a pagar.  </field>
+        </record>
+        <record id="categories_NET" model="hr.salary.rule.category">
+            <field name="name">(GLOBAL) REMUNERACION NETA</field>
+            <field name="code">NET</field>
+            <field name="note">Remuneracion NETA a pagar al empleado en esta liquidacion. </field>
+        </record>
+        <record id="categories_OTROS" model="hr.salary.rule.category">
+            <field name="name">(GLOBAL) OTROS</field>
+            <field name="code">OTR</field>
+        </record>
+
+        <!-- Categorias para SICOSS - 931 -->
+        <record id="categories_931BASIC" model="hr.salary.rule.category">
+            <field name="name">(931) SUELDO</field>
+            <field name="code">BASIC931</field>
+            <field name="parent_id" ref="l10n_ar_payroll.categories_GROSS" />
+            <field name="note">Uso para 931-AFIP - Sueldo basico del empleado. </field>
+        </record>
+        <record id="categories_931ADIC" model="hr.salary.rule.category">
+            <field name="name">(931) ADICIONALES</field>
+            <field name="code">ADIC931</field>
+            <field name="parent_id" ref="l10n_ar_payroll.categories_GROSS" />
+            <field name="note">Uso para 931-AFIP - Conceptos adcionales del sueldo del empleado. </field>
+        </record>
+        <record id="categories_931EXT" model="hr.salary.rule.category">
+            <field name="name">(931) HORAS EXTRA</field>
+            <field name="code">EXT931</field>
+            <field name="parent_id" ref="l10n_ar_payroll.categories_GROSS" />
+            <field name="note">Uso para 931-AFIP - Conceptos de horas extras del sueldo del empleado. </field>
+        </record>
+        <record id="categories_931PLUSZDESF" model="hr.salary.rule.category">
+            <field name="name">(931) PLUS POR ZONA DESFAVORABLE</field>
+            <field name="code">PLUSZDESF931</field>
+            <field name="parent_id" ref="l10n_ar_payroll.categories_GROSS" />
+            <field name="note">Uso para 931-AFIP - Conceptos de PLUS POR ZONA DESFAVORABLE del empleado. </field>
+        </record>
+        <record id="categories_931SAC" model="hr.salary.rule.category">
+            <field name="name">(931) S.A.C</field>
+            <field name="code">SAC931</field>
+            <field name="parent_id" ref="l10n_ar_payroll.categories_GROSS" />
+            <field name="note">Uso para 931-AFIP - Conceptos de SAC / Aguinaldo del empleado. </field>
+        </record>
+        <record id="categories_931VAC" model="hr.salary.rule.category">
+            <field name="name">(931) VACACIONES</field>
+            <field name="code">VAC931</field>
+            <field name="parent_id" ref="l10n_ar_payroll.categories_GROSS" />
+            <field name="note">Uso para 931-AFIP - Conceptos de Vacaicones o dias de descanso del empleado. </field>
+        </record>
+        <record id="categories_931PREM" model="hr.salary.rule.category">
+            <field name="name">(931) PREMIOS</field>
+            <field name="code">PREM931</field>
+            <field name="parent_id" ref="l10n_ar_payroll.categories_GROSS" />
+            <field name="note">Uso para 931-AFIP - Conceptos de premios adcionales otorgados al empleado. </field>
+        </record>
+        <record id="categories_931NOREM" model="hr.salary.rule.category">
+            <field name="name">(931) NO REMUNERATIVO</field>
+            <field name="code">NOREM931</field>
+            <field name="parent_id" ref="l10n_ar_payroll.categories_NOREM" />
+            <field name="note">Uso para 931-AFIP - Agrupa los conceptos no remunerativos de la liquidacion del empleado. </field>
+        </record>
+        <record id="categories_931MATERN" model="hr.salary.rule.category">
+            <field name="name">(931) MATERNIDAD</field>
+            <field name="code">MATERN931</field>
+            <field name="parent_id" ref="l10n_ar_payroll.categories_GROSS" />
+            <field name="note">Uso para 931-AFIP - Conceptos de licencia por maternidad. </field>
+        </record>
+        <record id="categories_931RECTREM" model="hr.salary.rule.category">
+            <field name="name">(931) RECTIFICATIVA REMUNERACION</field>
+            <field name="code">RECTREM931</field>
+            <field name="parent_id" ref="l10n_ar_payroll.categories_GROSS" />
+            <field name="note">Uso para 931-AFIP - Conceptos de rectificacion de remuneraciones. </field>
+        </record>
+        <record id="categories_931INCRSAL" model="hr.salary.rule.category">
+            <field name="name">(931) INCREMENTO SALARIAL (deprecated)</field>
+            <field name="code">INCRSAL931</field>
+            <field name="parent_id" ref="l10n_ar_payroll.categories_GROSS" />
+            <field name="note">Uso para 931-AFIP - Conceptos "Incremento Salarial" - Deprecado. </field>
+        </record>
+
+        <!-- Categorias de Totales, Subtotales y Auxiliares -->
+        <record id="categories_TOTAL_GROSS" model="hr.salary.rule.category">
+            <field name="name">(SUBTOTAL) TOTAL BRUTO</field>
+            <field name="code">TGROSS</field>
+        </record>
+        <record id="categories_TOTAL_NOREM" model="hr.salary.rule.category">
+            <field name="name">(SUBTOTAL) TOTAL NO REMUNERATIVO</field>
+            <field name="code">TNOREM</field>
+        </record>
+        <record id="categories_TOTAL_DESC" model="hr.salary.rule.category">
+            <field name="name">(SUBTOTAL) TOTAL DESCUENTOS</field>
+            <field name="code">TDESC</field>
+        </record>
+        <record id="categories_TOTAL_NET" model="hr.salary.rule.category">
+            <field name="name">(SUBTOTAL) TOTAL NETO</field>
+            <field name="code">TNET</field>
+        </record>
+
+    </data>
+</odoo>

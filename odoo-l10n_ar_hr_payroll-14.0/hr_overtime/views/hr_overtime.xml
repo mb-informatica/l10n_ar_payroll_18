@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="hr_overtime_management_tree" model="ir.ui.view">
+        <field name="name">hr.overtime.tree</field>
+        <field name="model">hr.overtime</field>
+        <field name="arch" type="xml">
+            <tree string="Horas Extras">
+                <field name="employee_id" widget="many2one_avatar_employee" />
+                <field name="overtime_type_id" decoration-bf="True" />
+                <field name="start_date" />
+                <field name="stop_date" />
+                <field name="overtime_hours" />
+                <field name="units" />
+                <field name="state" string="Estado" widget="badge" decoration-info="state == 'draft'" decoration-warning="state == 'confirm'" decoration-success="state == 'validate'" decoration-danger="state == 'cancel'" />
+                <button string="Aprobar" name="action_approve" type="object" icon="fa-thumbs-up" states="confirm" modifiers="{'invisible':[['state','not in',['confirm']]]}" />
+                <button string="Validar" name="action_submit" type="object" icon="fa-check" states="draft" modifiers="{'invisible':[['state','not in',['draft']]]}" />
+                <button string="Rechazar" name="action_cancel" type="object" icon="fa-times" states="confirm,draft,validate" modifiers="{'invisible':[['state','not in',['confirm','draft','validate']]]}" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="hr_overtime_management_search" model="ir.ui.view">
+        <field name="name">hr.overtime.search</field>
+        <field name="model">hr.overtime</field>
+        <field name="arch" type="xml">
+            <search string="Horas Extras">
+                <field name="employee_id" />
+                <field name="manager_id" />
+                <field name="start_date" />
+                <field name="stop_date" />
+                <separator />
+                <group expand="1" string="Agrupar por">
+                    <filter string="Empleado" name="employee_id" context="{'group_by':'employee_id'}" />
+                    <filter string="Oficial HR" name="manager_id" context="{'group_by':'manager_id'}" />
+                    <filter string="Fecha" name="start_date" context="{'group_by':'start_date'}" />
+                    <filter string="Estado" name="state" context="{'group_by':'state'}" />
+                    <filter string="Tipo" name="overtime_type_id" context="{'group_by':'overtime_type_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="hr_overtime_management_form" model="ir.ui.view">
+        <field name="name">hr.overtime.form</field>
+        <field name="model">hr.overtime</field>
+        <field name="arch" type="xml">
+            <form string="Horas Extras">
+                <header>
+                    <button name="action_submit" type="object" string="Confirmar" groups="base.group_user" attrs="{'invisible':[('state', '!=', 'draft')]}" />
+                    <button name="action_cancel" type="object" string="Cancelar" groups="base.group_user,hr.group_hr_manager" attrs="{'invisible':[('state', '!=', 'confirm')]}" />
+                    <button name="action_approve" type="object" string="Aprobar" groups="hr.group_hr_manager" attrs="{'invisible':[('state', '!=', 'confirm')]}" />
+                    <button name="action_refuse" type="object" string="Cancelar" groups="hr.group_hr_manager" attrs="{'invisible':[('state', '!=', 'confirm')]}" />
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirm,refuse,validate,cancel" />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_attendance" type="object" class="oe_stat_button" icon="fa-user" string="Asistencias"></button>
+                    </div>
+                    <h2>
+                        <field name="name" nolabel="1" />
+                    </h2>
+                    <group col="4">
+                        <label for="start_date" string="Periodo" />
+                        <div colspan="3">
+                            <field name="start_date" class="oe_inline" />
+                            -
+                            <field name="stop_date" class="oe_inline" />
+                        </div>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="employee_id" required="True" />
+                            <field name="contract_id" />
+                            <field name="manager_id" string="Responsable" />
+                        </group>
+                        <group>
+                            <field name="overtime_type_id" />
+                            <field name="overtime_type_duration_type" readonly="1" />
+                            <field name="attendance_id" invisible="1" />
+                            <field name="overtime_hours" readonly="1" attrs="{'invisible':[('overtime_type_duration_type', '!=', 'hour')]}" />
+                            <field name="units" attrs="{'invisible':[('overtime_type_duration_type', '!=', 'unit')]}" />
+                        </group>
+                    </group>
+                    <separator string="Notas" />
+                    <field name="notes" nolabel="1" colspan="2" />
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action View -->
+    <record id="action_hr_overtime_management" model="ir.actions.act_window">
+        <field name="name">Horas Extras</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.overtime</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="hr_overtime_management_search" />
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+	            Aun no se han creado horas extras. Puede crear una presionando en "Crear".
+	        </p>
+        </field>
+    </record>
+
+</odoo>
